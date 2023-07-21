@@ -1,0 +1,7 @@
+<div class="progress-bar">
+    <div class="tradingVolume-break-point " *ngFor="let volume of barOptions" [style.left]="calcPercentage(volume.volume,barOptions)">{{volume.volume}}</div>
+    <div class="break-point" *ngFor="let point of barOptions" [style.left]="calcPercentage(point.volume,barOptions)"></div>
+    <div class="price-break-point" *ngFor="let prize of barOptions" [style.left]="calcPercentage(prize.volume,barOptions)">{{prize.prize}}</div>
+  <div class="progress green" [style.width]="greenPercent"></div>
+  <div class="progress progress-striped" [style.width]="bluePercentage"></div>
+</div>
